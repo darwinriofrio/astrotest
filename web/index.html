@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>  
+<html>  
+<head>  
+    <title>Consulta y gestiona tus datos de Facebook ¿Recuerdas que has publicado hace unos meses?</title>  
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />  
+    <link   type="text/css" href="/misproyectos/seeLikesFaster/css/sunny/jquery-ui-1.8.18.custom.css" rel="stylesheet" />   
+    <script type="text/javascript" src="/misproyectos/seeLikesFaster/js/jquery-1.7.1.min.js"></script>  
+    <script type="text/javascript" src="/misproyectos/seeLikesFaster/js/jquery-ui-1.8.18.custom.min.js"></script>  
+    <script type="text/javascript"  src="see-likes-faster.js"></script>  
+    <style type="text/css">  
+        #ajaxActivityIndicator {color:darkgreen;font-weight:bold;}  
+        #statusDiv {width:95%;}  
+        .ui-tabs {font-size:small}  
+        .selectLink {width:95%;}  
+          
+        #app-content-title   {background-color:#eaeaea; color:#000;padding:.4em;border-style:solid;border-color:#aaa;border-width:1px;border-radius:12px;width:80%}  
+        #app-content-title p {margin-left:1em;font-weight:bold;}  
+    </style>  
+</head>  
+<body>  
+    <div id="app-content">  
+        <div id="fb-root"></div>  
+          
+        <div id="app-content-title">  
+            <h1>Consulta y gestiona tus datos de Facebook</h1>  
+            <p>¿Recuerdas que has publicado hace unos meses?¿Te gustaría consultarla, eliminarla, etc?</p>  
+            <p>Aplicación desarrollada por: <a href="http://www.carlos-garcia.es/" target="_blank">Carlos García Pérez</a> [En construcción]</p>  
+        </div>  
+        <p id="ajaxActivityIndicator">Cargando, espere por favor ... </p>  
+        <div id="toolbar_actions">  
+            <div id="logged_actions">  
+                <p><a href="#" id="loginFacebook">Iniciar sessión en Facebook</a></p>  
+                  
+                <div id="notesBeta">  
+                    <p><strong>Versión Beta</strong></p>  
+                    <ul>  
+                        <li>Quizás tengas que refrescar la página la primera vez que te pide permisos. :-)</li>  
+                        <li>Nota: Al iniciar sesión en Facebook, la aplicación abre una ventana emergente, es posible que tu navegador la bloquee.</li>  
+                    </ul>  
+                </div>  
+            </div>  
+            <div id="user_information"></div>     
+        </div>  
+          
+        <div class="field" style="margin:1em">  
+            <label  for="friendList">Seleccione una persona:</label>  
+            <select id="friendList"  name="friendList"></select>  
+        </div>  
+           
+        <div id="tabs">  
+            <ul>  
+                <li><a href="#likesDiv">Enlaces que le gustan</a></li>  
+                <li><a href="#postsDiv">Enlaces que comparte</a></li>  
+                <li><a href="#statusDiv">Histórico de estados</a></li>  
+            </ul>  
+            <div id="likesDiv" class="field">  
+                <select id="likes"  name="likes" class="selectLink"></select>  
+                <div id="previewLikes">  
+                    <p><a id="previewLink" href="#" target="_blank">Abrir en otra ventana:</a></p>  
+                    <iframe id="externalWebPreviewLikes" width="95%" height="500px" src=""></iframe>      
+                </div>  
+            </div>  
+            <div id="postsDiv" class="field">  
+                <select id="posts"  name="posts" class="selectLink"></select>  
+                <div id="previewPosts">  
+                    <p><a id="postLink" href="#" target="_blank">Abrir en Facebook (entre otras cosas, podrás eliminarlo):</a></p>  
+                    <iframe id="externalWebPreviewPost" width="95%" height="500px" src=""></iframe>   
+                </div>  
+            </div>  
+            <div id="statusDiv">  
+                <ul id="status"></ul>  
+            </div>      
+        </div>      
+    </div>  
+    <script type="text/javascript" src="https://connect.facebook.net/en_US/all.js#appId=260258167381597&xfbml=1&cookie=1&status=1"></script>  
+</body>  
+</html> 
